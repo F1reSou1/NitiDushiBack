@@ -22,7 +22,7 @@ COPY . .
 RUN npm install \
   && npx prisma generate \
   && npx prisma migrate deploy \
-  && npm build 
+  && npm run build 
 
 # Используем более легкий базовый образ Alpine для финального контейнера
 FROM base as app
