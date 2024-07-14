@@ -19,7 +19,7 @@ COPY . .
 # Генерируем .prisma
 # Выполняем миграции
 # Собираем проект
-RUN npm install --frozen-lockfile \
+RUN npm install \
   && npx prisma generate \
   && npx prisma migrate deploy \
   && npm build 
